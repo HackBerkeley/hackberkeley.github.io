@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Hi. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hackers@Berkeley</title>
+<style>
+@keyframes logo-wobble {
+	0% {
+		transform: translate(0, 40px);
+	}
+	
+	50% {
+		transform: translate(0, 60px);
+	}
+	
+	100% {
+		transform: translate(0, 40px);
+	}
+}
+
+@keyframes cloud-move {
+	0% {
+		transform: translate(-200px, 0px);
+		opacity: 0;
+	}
+	
+	20% {
+		opacity: 1;
+	}
+	
+	80% {
+		opacity: 1;
+	}
+	
+	100% {
+		transform: translate(1400px, 0px);
+		opacity: 0;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: Roboto, sans-serif;
+}
+
+main {
+	text-align: center;
+	padding: 1em;
+}
+
+h1 {
+	margin-bottom: 0.5em;
+}
+
+a:link, a:visited {
+	color: #0D47A1;
+	transition: color 0.5s;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1976D2;
+	transition: color 0.5s;
+}
+
+h2 {
+	color: #AAA;
+}
+
+p.quote {
+	font-size: 75%;
+	font-style: italic;
+	color: #CCC;
+}
+	
+header {
+	width: 100%;
+	height: 400px;
+	background: linear-gradient(#90DF79, #32B33F);
+}
+
+.scene {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	height: 400px;
+}
+
+.scene div.logo {
+	background-image: url(hab/hab.svg);
+	background-size: 250px 250px;
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	left: 50%;
+	margin-left: -125px;
+	
+	z-index: 10;
+	
+	animation-duration: 10s;
+	animation-name: logo-wobble;
+	animation-iteration-count: infinite;
+}
+
+.scene div.cloud1 {
+	background-image: url(hab/cloud1.svg);
+	width: 202px;
+	height: 58px;
+	position: absolute;
+	margin-top: 40px;
+	
+	z-index: 9;
+	
+	animation-duration: 45s;
+	animation-name: cloud-move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: -22.5s;
+}
+
+.scene div.cloud2 {
+	background-image: url(hab/cloud2.svg);
+	width: 224px;
+	height: 58px;
+	position: absolute;
+	margin-top: 280px;
+	
+	z-index: 11;
+	
+	animation-duration: 40s;
+	animation-name: cloud-move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: -12s;
+}
+
+.scene div.cloud3 {
+	background-image: url(hab/cloud3.svg);
+	width: 68px;
+	height: 40px;
+	position: absolute;
+	animation-name: cloud-move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.scene div.cloud4 {
+	background-image: url(hab/cloud4.svg);
+	width: 116px;
+	height: 50px;
+	position: absolute;
+	animation-name: cloud-move;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.scene div.cloud3.top {
+	margin-top: 80px;
+	z-index: 9;
+	animation-duration: 50s;
+	animation-delay: -8.75s;
+}
+
+.scene div.cloud4.top {
+	margin-top: 60px;
+	z-index: 9;
+	animation-duration: 50s;
+	animation-delay: -5s;
+}
+
+.scene div.cloud3.bottom {
+	margin-top: 270px;
+	z-index: 11;
+	animation-duration: 30s;
+	animation-delay: -21s;
+}
+
+.scene div.cloud4.bottom {
+	margin-top: 290px;
+	z-index: 11;
+	animation-duration: 30s;
+	animation-delay: -22.5s;
+}
+
+@media screen and (max-width: 767px) {
+	@keyframes cloud-move {
+		0% {
+			transform: translate(-200px, 0px);
+			opacity: 0;
+		}
+		
+		20% {
+			opacity: 1;
+		}
+		
+		80% {
+			opacity: 1;
+		}
+		
+		100% {
+			transform: translate(800px, 0px);
+			opacity: 0;
+		}
+	}
+
+	.scene {
+		width: 100%;
+		overflow-x: hidden;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	@keyframes cloud-move {
+		0% {
+			transform: translate(-200px, 0px);
+			opacity: 0;
+		}
+		
+		20% {
+			opacity: 1;
+		}
+		
+		80% {
+			opacity: 1;
+		}
+		
+		100% {
+			transform: translate(1100px, 0px);
+			opacity: 0;
+		}
+	}
+
+	.scene {
+		width: 100%;
+		overflow-x: hidden;
+	}
+}
+</style>
+</head>
+<body>
+<header>
+	<div class="scene">
+		<div class="cloud1"></div>
+		<div class="cloud2"></div>
+		<div class="cloud3 top"></div>
+		<div class="cloud4 top"></div>
+		<div class="cloud3 bottom"></div>
+		<div class="cloud4 bottom"></div>
+		<div class="logo"></div>
+	</div>
+</header>
+<main>
+	<h1><a href="https://www.facebook.com/events/545416368968200/">Hackers@Berkeley General Meeting #0</a></h1>
+	<h2>Friday, February 5th, 6 PM @ HP Auditorium</h2>
+	<p class="quote">"the grass is always greener on the other sky" - rodney</p>
+</main>
+</body>
+</html>
