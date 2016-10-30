@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hackers@Berkeley</title>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab');
 @keyframes logo-wobble {
 	0% {
 		transform: translate(0, 40px);
@@ -21,7 +22,7 @@
 
 @keyframes cloud-move {
 	0% {
-		transform: translate(-200px, 0px);
+		transform: translate(-20vw, 0px);
 		opacity: 0;
 	}
 	
@@ -34,7 +35,7 @@
 	}
 	
 	100% {
-		transform: translate(1400px, 0px);
+		transform: translate(120vw, 0px);
 		opacity: 0;
 	}
 }
@@ -51,26 +52,37 @@ body {
 
 main {
 	text-align: center;
-	padding: 1em;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 1.5vh;
+	border-radius: 1.5vh;
+	position: absolute;
+	width: 53vh;
+	top: 70vh;
+	left: calc(50vw - 28vh);
+	z-index: 100;
+	color: #FFFFFF;
+	text-shadow: 0 0 0.5em #000000, 0 0 0.15em #000000;
 }
 
 h1 {
 	margin-bottom: 0.5em;
+	font-size: 5vh;
+	font-family: "Roboto Slab";
 }
 
 a:link, a:visited {
-	color: #0D47A1;
+	color: #90CAF9;
 	transition: color 0.5s;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #1976D2;
+	color: #BBDEFB;
 	transition: color 0.5s;
 }
 
 h2 {
-	color: #AAA;
+	font-size: 2.5vh;
 }
 
 p.quote {
@@ -81,25 +93,27 @@ p.quote {
 	
 header {
 	width: 100%;
-	height: 400px;
+	height: 100vh;
 	background: linear-gradient(#90DF79, #32B33F);
 }
 
 .scene {
-	width: 1200px;
+	width: 100vw;
 	margin: 0 auto;
 	position: relative;
-	height: 400px;
+	height: 100vh;
+	overflow-x: hidden;
 }
 
-.scene div.logo {
+.scene div#logo {
 	background-image: url(hab/hab.svg);
-	background-size: 250px 250px;
-	width: 250px;
-	height: 250px;
+	background-size: 50vmin 50vmin;
+	width: 50vmin;
+	height: 50vmin;
 	position: absolute;
+	top: calc(40vh - 25vmin - 50px);
 	left: 50%;
-	margin-left: -125px;
+	margin-left: -25vmin;
 	
 	z-index: 10;
 	
@@ -113,7 +127,7 @@ header {
 	width: 202px;
 	height: 58px;
 	position: absolute;
-	margin-top: 40px;
+	margin-top: 10vh;
 	
 	z-index: 9;
 	
@@ -129,7 +143,7 @@ header {
 	width: 224px;
 	height: 58px;
 	position: absolute;
-	margin-top: 280px;
+	margin-top: 80vh;
 	
 	z-index: 11;
 	
@@ -161,84 +175,39 @@ header {
 }
 
 .scene div.cloud3.top {
-	margin-top: 80px;
+	margin-top: 25vh;
 	z-index: 9;
 	animation-duration: 50s;
 	animation-delay: -8.75s;
 }
 
 .scene div.cloud4.top {
-	margin-top: 60px;
+	margin-top: 15vh;
 	z-index: 9;
 	animation-duration: 50s;
 	animation-delay: -5s;
 }
 
 .scene div.cloud3.bottom {
-	margin-top: 270px;
+	margin-top: 70vh;
 	z-index: 11;
 	animation-duration: 30s;
 	animation-delay: -21s;
 }
 
 .scene div.cloud4.bottom {
-	margin-top: 290px;
+	margin-top: 85vh;
 	z-index: 11;
 	animation-duration: 30s;
 	animation-delay: -22.5s;
 }
 
 @media screen and (max-width: 767px) {
-	@keyframes cloud-move {
-		0% {
-			transform: translate(-200px, 0px);
-			opacity: 0;
-		}
-		
-		20% {
-			opacity: 1;
-		}
-		
-		80% {
-			opacity: 1;
-		}
-		
-		100% {
-			transform: translate(800px, 0px);
-			opacity: 0;
-		}
-	}
-
-	.scene {
-		width: 100%;
-		overflow-x: hidden;
-	}
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	@keyframes cloud-move {
-		0% {
-			transform: translate(-200px, 0px);
-			opacity: 0;
-		}
-		
-		20% {
-			opacity: 1;
-		}
-		
-		80% {
-			opacity: 1;
-		}
-		
-		100% {
-			transform: translate(1100px, 0px);
-			opacity: 0;
-		}
-	}
-
-	.scene {
-		width: 100%;
-		overflow-x: hidden;
+	main {
+		width: 100vw;
+		border-radius: 0;
+		padding: 1.5vh 0;
+		left: 0;
 	}
 }
 </style>
@@ -252,13 +221,12 @@ header {
 		<div class="cloud4 top"></div>
 		<div class="cloud3 bottom"></div>
 		<div class="cloud4 bottom"></div>
-		<div class="logo"></div>
+		<div id="logo"></div>
 	</div>
 </header>
 <main>
-	<h1><a href="https://www.facebook.com/events/545416368968200/">Hackers@Berkeley General Meeting #0</a></h1>
-	<h2>Friday, February 5th, 6 PM @ HP Auditorium</h2>
-	<p class="quote">"the grass is always greener on the other sky" - rodney</p>
+	<h1>Hackers@Berkeley</h1>
+	<h2><a href="https://www.facebook.com/groups/hackberkeley/">join us</a> || <a href="https://www.facebook.com/HackersAtBerkeley">like us</a> || <a href="mailto:team@hackersatberkeley.com">contact us</a></h2>
 </main>
 </body>
 </html>
