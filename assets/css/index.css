@@ -1,0 +1,281 @@
+body {
+	text-align: center;
+    margin: auto 10px;
+    width: auto;
+    height: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+	background-color: #FFFCF9;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    filter: brightness(30%);
+    -webkit-filter: brightness(30%);
+    -moz-filter: brightness(30%);
+    -o-filter: brightness(30%);
+    left: 0;
+    max-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#top_bar {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+}
+
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  /*top: 50px;*/
+  top: 14px;
+  left: 50px;
+  
+  /*top: -35px;*/
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: white;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #00b386;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  /*position: absolute;*/
+  width: 200px;
+  height: 535px;
+  margin: -130px 0 0 -80px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 20px 0;
+  font-size: 22px;
+  color: black;
+  margin-right: 50%;
+  width: 100%;
+}
+
+#menu a {
+  margin-left: 60%;
+  text-decoration: none;
+}
+
+#menu li:hover {
+    transition: background-color .5s ease;
+    background-color: #00b386;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+/* Overriding default styles on the ul */
+/*.sidebar-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}*/
+
+/*.container {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 50px;
+}*/
+
+/*.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}*/
+
+/* Rotate first bar */
+/*.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 4px) ;
+    transform: rotate(-45deg) translate(-8px, 4px) ;
+}*/
+
+/* Fade out the second bar */
+/*.change .bar2 {
+    opacity: 0;
+}*/
+
+/* Rotate last bar */
+/*.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}*/
+
+#outside_menu {
+    float: left;
+}
+
+#login {
+    float: right;
+}
+
+#center_view {
+    /*position: fixed;*/
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 2%;
+    /*vertical-align: middle;*/
+}
+
+#logo {
+    /*position: fixed;*/
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+}
+
+#header {
+    /*position: relative;*/
+    margin-top: 10px;
+    display: block;
+    height: 100px;
+    width: 500px;
+    color: white;
+    font-size: 50px;
+}
+
+#slogan {
+    margin-top: -20px;
+    display: block;
+    height: 100px;
+    width: 500px;
+    color: white;
+    font-size: 30px;
+}
+
+#calendar {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    margin-top: -30px;
+    border: 2px solid;
+    border-color: #00b386;
+    border-radius: 25px
+}
+
+button {    
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

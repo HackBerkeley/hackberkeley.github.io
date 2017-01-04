@@ -1,223 +1,54 @@
-<!DOCTYPE html>
 <html>
 <head>
-<!-- Hi. -->
-<meta property="og:title" content="Hackers@Berkeley">
-<meta property="og:type" content="website">
-<meta property="og:image" content="/hab/banner.png">
-<meta property="og:url" content="https://hackersatberkeley.com/">
-<meta property="og:description" content="Hackers@Berkeley's main page. See upcoming events and learn how you become a part of our team!">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hackers@Berkeley</title>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab');
-@keyframes logo-wobble {
-	0% {
-		transform: translate(0, 40px);
-	}
-	
-	50% {
-		transform: translate(0, 60px);
-	}
-	
-	100% {
-		transform: translate(0, 40px);
-	}
-}
-
-@keyframes cloud-move {
-	0% {
-		transform: translate(-20vw, 0px);
-		opacity: 0;
-	}
-	
-	20% {
-		opacity: 1;
-	}
-	
-	80% {
-		opacity: 1;
-	}
-	
-	100% {
-		transform: translate(120vw, 0px);
-		opacity: 0;
-	}
-}
-
-* {
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	overflow-x: hidden;
-	font-family: Roboto, sans-serif;
-}
-
-main {
-	text-align: center;
-	background: rgba(0, 0, 0, 0.5);
-	padding: 2vh;
-	border-radius: 2vh;
-	position: absolute;
-	width: 52vh;
-	top: 70vh;
-	left: calc(50vw - 28vh);
-	z-index: 100;
-	color: #FFFFFF;
-	text-shadow: 0 0 0.5em #000000, 0 0 0.15em #000000;
-}
-
-h1 {
-	margin-bottom: 0.25em;
-	font-size: 5vh;
-	font-family: "Roboto Slab";
-}
-
-a {
-	transition: color 0.5s;
-	text-decoration: none;
-}
-
-a:link, a:visited {
-	color: #90CAF9;
-}
-
-a:hover {
-	color: #BBDEFB;
-}
-
-h2 {
-	font-size: 2.5vh;
-}
-
-p.quote {
-	font-size: 75%;
-	font-style: italic;
-	color: #CCC;
-}
-
-.cloud {
-	position: absolute;
-	animation-name: cloud-move;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-#scene {
-	width: 100vw;
-	margin: 0 auto;
-	position: relative;
-	height: 100vh;
-	overflow-x: hidden;
-	background: linear-gradient(#90DF79, #32B33F);
-}
-
-#scene #logo {
-	background-image: url(hab/hab.svg);
-	background-size: 50vmin 50vmin;
-	width: 50vmin;
-	height: 50vmin;
-	position: absolute;
-	top: calc(40vh - 25vmin - 50px);
-	left: 50%;
-	margin-left: -25vmin;
-	
-	z-index: 10;
-	
-	animation-duration: 10s;
-	animation-name: logo-wobble;
-	animation-iteration-count: infinite;
-}
-
-#scene .cloud.type1 {
-	background-image: url(hab/cloud1.svg);
-	width: 202px;
-	height: 58px;
-	margin-top: 10vh;
-	
-	z-index: 9;
-	
-	animation-duration: 45s;
-	animation-delay: -22.5s;
-}
-
-#scene .cloud.type2 {
-	background-image: url(hab/cloud2.svg);
-	width: 224px;
-	height: 58px;
-	margin-top: 80vh;
-	
-	z-index: 11;
-	
-	animation-duration: 40s;
-	animation-delay: -12s;
-}
-
-#scene .cloud.type3 {
-	background-image: url(hab/cloud3.svg);
-	width: 68px;
-	height: 40px;
-}
-
-#scene .cloud.type4 {
-	background-image: url(hab/cloud4.svg);
-	width: 116px;
-	height: 50px;
-}
-
-#scene .cloud.type3.top {
-	margin-top: 25vh;
-	z-index: 9;
-	animation-duration: 50s;
-	animation-delay: -8.75s;
-}
-
-#scene .cloud.type4.top {
-	margin-top: 15vh;
-	z-index: 9;
-	animation-duration: 50s;
-	animation-delay: -5s;
-}
-
-#scene .cloud.type3.bottom {
-	margin-top: 70vh;
-	z-index: 11;
-	animation-duration: 30s;
-	animation-delay: -21s;
-}
-
-#scene .cloud.type4.bottom {
-	margin-top: 85vh;
-	z-index: 11;
-	animation-duration: 30s;
-	animation-delay: -22.5s;
-}
-
-@media screen and (max-width: 767px) {
-	main {
-		width: 100vw;
-		border-radius: 0;
-		padding: 1.5vh 0;
-		left: 0;
-	}
-}
-</style>
+	<title>Hackers@Berkeley</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+	<script src="assets/js/menu.js"></script>
 </head>
 <body>
-<div id="scene">
-	<div class="cloud type1"></div>
-	<div class="cloud type2"></div>
-	<div class="cloud type3 top"></div>
-	<div class="cloud type4 top"></div>
-	<div class="cloud type3 bottom"></div>
-	<div class="cloud type4 bottom"></div>
-	<div id="logo"></div>
-</div>
-<main>
-	<h1>Hackers@Berkeley</h1>
-	<h2><a href="https://www.facebook.com/groups/hackberkeley/" target="_blank">join us</a> || <a href="https://www.facebook.com/HackersAtBerkeley" target="_blank">like us</a> || <a href="mailto:team@hackersatberkeley.com">contact us</a></h2>
-</main>
+	<div id="top_bar">
+		<div id="outside_menu">
+			<nav role="navigation">
+			  <div id="menuToggle">
+
+			    <input type="checkbox" />
+			    
+			    <span></span>
+			    <span></span>
+			    <span></span>
+			    
+			    <ul id="menu">
+			      <a href="#"><li>Home</li></a>
+			      <a href="#"><li>About Us</li></a>
+			      <a href="#"><li>Event Calendar</li></a>
+			      <a href="#"><li>Hackers of Berkeley</li></a>
+			      <a href="#"><li>Contact Us</li></a>
+			      <a href="#"><li>Requests</li></a>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+		<div id="login">
+			<button type="button">Login</button> 
+		</div>
+	</div>
+
+	<div id="center_view">
+		<img id="logo" src="assets/img/h@b_logo.png">
+		<div id="header">
+			<span style="color:#00b386;">HACKERS</span>
+			<span style="color:white;">AT</span>
+			<span style="color:#00b386;">BERKELEY</span>
+		</div>
+		<div id="slogan">
+			Build.Break.Build
+		</div>
+		<div id="calendar">
+			<button type="button">Event calendar</button> 
+		</div>
+	</div>
+	
+	<img id="background" src="assets/img/background_landing_page.JPG">
+
 </body>
 </html>
