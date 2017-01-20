@@ -279,3 +279,17 @@ button {
     overflow: hidden;
     outline:none;
 }
+
+a.button {
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-decoration: none;
+}
