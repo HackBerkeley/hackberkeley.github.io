@@ -223,6 +223,7 @@ td > .text.bio {
 .photo img{
 	width: 100%
 }
-.photo2 {
-    display: none;
+.photo2 img:hover {
+	/*transition: photo2 .5s ease;*/
+    width: 100%;
 }
