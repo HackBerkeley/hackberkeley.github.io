@@ -1,38 +1,48 @@
 body {
-	text-align: center;
-    margin: auto 10px;
-    width: auto;
+	  text-align: center;
+    margin: auto;
+    width: 100%;
     height: 10px;
     font-family: 'Open Sans Condensed', sans-serif;
-	background-color: #FFFCF9;
+	  background-color: transparent;
 }
 
-#background {
-    position: fixed;
-    top: 0;
-    filter: brightness(30%);
-    -webkit-filter: brightness(30%);
-    -moz-filter: brightness(30%);
-    -o-filter: brightness(30%);
-    left: 0;
-    max-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
+.circle{
+    background: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    margin-left: -100px;
+  }
+  #logo {
+      position: fixed;
+      display: block;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      z-index: 5;
+      top: 2.9%;
+      left: 50%;
+      margin-left: -90px;
+  }
+
 
 #top_bar {
     width: 100%;
-    height: 50px;
-    margin-top: 50px;
+    height: 125px;
+    top: 0 ;
+    background-color:  #00b386;
 }
-
 
 #menuToggle
 {
   display: block;
   position: relative;
   /*top: 50px;*/
-  top: 14px;
+  top: 50px;
   left: 50px;
 
   /*top: -35px;*/
@@ -172,124 +182,47 @@ body {
   transform: scale(1.0, 1.0);
   opacity: 1;
 }
-
-/* Overriding default styles on the ul */
-/*.sidebar-container ul {
+.pagetitle{
+	text-align: center;
+	font-size: 72px;
+	color: gray;
+	margin-top: 100px;
+}
+.staff {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    tposition: absolute;
+    /*margin-top: 150px;*/
+}
+.staff, .staff tr, .staff td {
+}
+.staff td {
+    width: 33%;
+}
+.staff .segmenttitle {
+    padding: 10px 10px 0;
+		font-size: 40px;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    margin-top: 10px;
-}*/
-
-/*.container {
-    display: inline-block;
-    cursor: pointer;
-    margin-left: 50px;
-}*/
-
-/*.bar1, .bar2, .bar3 {
-    width: 25px;
-    height: 4px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-}*/
-
-/* Rotate first bar */
-/*.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-8px, 4px) ;
-    transform: rotate(-45deg) translate(-8px, 4px) ;
-}*/
-
-/* Fade out the second bar */
-/*.change .bar2 {
-    opacity: 0;
-}*/
-
-/* Rotate last bar */
-/*.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-}*/
-
-#outside_menu {
-    float: left;
 }
-
-#login {
-    float: right;
+.staff .text {
+    margin: 0;
+    padding: 0 10px 10px;
 }
-
-#center_view {
-    /*position: fixed;*/
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    margin-top: 2%;
-    /*vertical-align: middle;*/
+td > .text.bio {
+    font-weight: 500;
+		font-style: italic;
+    font-size: 25px;
+    margin: 2px 0 4px;
 }
-
-#logo {
-    /*position: fixed;*/
-    display: block;
-    margin: 0 auto;
-    width: 280px;
-    height: 280px;
+.photo {
+    width:90%;
+		overflow: hidden;
+    margin: 10px auto 0;
 }
-
-#header {
-    /*position: relative;*/
-    margin-top: 10px;
-    display: block;
-    height: 100px;
-    width: 500px;
-    color: white;
-    font-size: 50px;
+.photo img{
+	width: 100%
 }
-
-#slogan {
-    margin-top: -20px;
-    display: block;
-    height: 100px;
-    width: 500px;
-    color: white;
-    font-size: 30px;
-}
-
-#calendar {
-    display: block;
-    margin: 0 auto;
-    height: 50px;
-    width: 200px;
-    margin-top: -30px;
-    border: 2px solid;
-    border-color: #00b386;
-    border-radius: 25px
-}
-
-button {
-    color: white;
-    height: 50px;
-    width: 200px;
-    font-size: 20px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-}
-
-a.button {
-    color: white;
-    height: 50px;
-    width: 200px;
-    font-size: 30px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    text-decoration: none;
+.photo2 {
+    display: none;
 }
