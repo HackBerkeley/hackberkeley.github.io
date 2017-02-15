@@ -198,6 +198,7 @@ body {
 .staff, .staff tr, .staff td {
 }
 .staff td {
+		vertical-align: top;
     width: 33%;
 }
 .staff .segmenttitle {
@@ -216,6 +217,7 @@ td > .text.bio {
     margin: 2px 0 4px;
 }
 .photo {
+		align-self: baseline;
     width:90%;
 		overflow: hidden;
     margin: 10px auto 0;
