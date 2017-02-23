@@ -1,41 +1,125 @@
 <html>
+<head>
+	<title>Contact</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/about.css" />
+	<script src="assets/js/menu.js"></script>
+</head>
 <body>
-<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-	<div class="row">
-		<label for="name">Your name:</label><br />
-		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-	</div>
-	<div class="row">
-		<label for="email">Your email:</label><br />
-		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-	</div>
-	<div class="row">
-		<label for="message">Your message:</label><br />
-		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-	</div>
-	<input id="submit_button" type="submit" value="Send email" />
-</form>
-<div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+	<div id="top_bar">
+		<div id="outside_menu">
+			<nav role="navigation">
+				<div id="menuToggle">
 
-  <!-- Your like button code -->
-  <div class="fb-like"
-    data-href="http://www.your-domain.com/your-page.html"
-    data-layout="standard"
-    data-action="like"
-    data-show-faces="true">
-  </div>
+					<input type="checkbox" />
 
-<a href="https://twitter.com/hackberkeley" class="twitter-follow-button" data-show-count="false">Follow @hackberkeley</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<span></span>
+					<span></span>
+					<span></span>
 
-<a class="twitter-timeline" href="https://twitter.com/HackBerkeley">Tweets by HackBerkeley</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<ul id="menu">
+						<a href="index.html"><li>Home</li></a>
+						<a href="about.html"><li>About Us</li></a>
+						<a href="calendar.html"><li>Event Calendar</li></a>
+						<a href="https://medium.com/hackersatberkeley"><li>Hackers of Berkeley</li></a>
+						<a href="contact.html"><li>Contact Us</li></a>
+						<a href="https://docs.google.com/forms/d/e/1FAIpQLSd-C6XUFoXVkrW-yJ0DkTCSx1EnA7VQj-DbWJVK5mLszGToYg/viewform"><li>Requests</li></a>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div class="circle"></div>
+	<a href="index.html"><img id = "logo"src="assets/img/h@b_logo.png"></a>
+	<div class=pagetitle>Contact Us</div>
+	<table class=contact align="center">
+		<tbody>
+			<tr>
+				<td>
+					<form name="contactform" method="post" action="send_form_email.php">
+						<table width="450px">
+							<tr>
+								<td valign="top">
+									<label for="first_name">First Name *</label>
+								</td>
+								<td valign="top">
+									<input  type="text" name="first_name" maxlength="50" size="30">
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<label for="last_name">Last Name *</label>
+								</td>
+								<td valign="top">
+									<input  type="text" name="last_name" maxlength="50" size="30">
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<label for="email">Email Address *</label>
+								</td>
+								<td valign="top">
+									<input  type="text" name="email" maxlength="80" size="30">
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<label for="subject">Subject *</label>
+								</td>
+								<td valign="top">
+									<input  type="text" name="subject" maxlength="30" size="30">
+								</td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<label for="comments">Comments *</label>
+								</td>
+								<td valign="top">
+									<textarea  name="comments" maxlength="1000" cols="30" rows="6"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align:center">
+									<input type="submit" value="Submit">
+								</td>
+							</tr>
+						</table>
+					</form>
+				</td>
+				<td>
+					<div>
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FHackersAtBerkeley%2F&tabs&width=340&height=213&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="213" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					</div>
+					<div>
+						<a href="https://twitter.com/hackberkeley" class="twitter-follow-button" data-show-count="false">Follow @hackberkeley</a>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+		<!-- <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+			<div class="row">
+				<label for="name">Your name:</label><br />
+				<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+			</div>
+			<div class="row">
+				<label for="email">Your email:</label><br />
+				<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+			</div>
+			<div class="row">
+				<label for="message">Your message:</label><br />
+				<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+			</div>
+			<input id="submit_button" type="submit" value="Send email" />
+		</form> -->
+
+
+
+
+	<!-- <a class="twitter-timeline" href="https://twitter.com/HackBerkeley">Tweets by HackBerkeley</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
 </body>
 </html>

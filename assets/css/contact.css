@@ -1,5 +1,4 @@
 body {
-	  text-align: center;
     margin: auto;
     width: 100%;
     height: 10px;
@@ -16,7 +15,6 @@ body {
     top: 2%;
     left: 50%;
     margin-left: -100px;
-		z-index: 0;
   }
   #logo {
       position: fixed;
@@ -189,44 +187,14 @@ body {
 	color: gray;
 	margin-top: 100px;
 }
-.team {
+.contact {
     width: 100%;
     text-align: center;
     position: absolute;
     tposition: absolute;
     /*margin-top: 150px;*/
 }
-.team, .team tr, .team td {
-}
-.team td {
-		vertical-align: top;
-    width: 33%;
-}
-.team .segmenttitle {
-    padding: 10px 10px 0;
-		font-size: 40px;
-    margin: 0;
-}
-.team .text {
-    margin: 0;
-    padding: 0 10px 10px;
-}
-td > .text.bio {
-    font-weight: 500;
-		font-style: italic;
-    font-size: 25px;
-    margin: 2px 0 4px;
-}
-.photo {
-		align-self: baseline;
-    width:90%;
-		overflow: hidden;
-    margin: 10px auto 0;
-}
-.photo img{
-	width: 100%
-}
-.photo2 img:hover {
-	/*transition: photo2 .5s ease;*/
-    width: 100%;
+.contact td {
+  margin-left:auto;
+  margin-right:auto;
 }
