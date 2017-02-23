@@ -16,9 +16,8 @@ body {
     left: 50%;
     margin-left: -100px;
   }
-  #logo {
+  .logo {
       position: absolute;
-      display: block;
       width: 180px;
       height: 180px;
       border-radius: 50%;

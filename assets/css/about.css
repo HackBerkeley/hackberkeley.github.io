@@ -18,7 +18,7 @@ body {
     margin-left: -100px;
 		z-index: 0;
   }
-  #logo {
+  .logo {
       position: absolute;
       display: block;
       width: 180px;
