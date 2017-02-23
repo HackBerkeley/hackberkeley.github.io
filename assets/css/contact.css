@@ -17,7 +17,7 @@ body {
     margin-left: -100px;
   }
   #logo {
-      position: fixed;
+      position: absolute;
       display: block;
       width: 180px;
       height: 180px;
