@@ -19,7 +19,7 @@ body {
 		z-index: 0;
   }
   #logo {
-      position: fixed;
+      position: absolute;
       display: block;
       width: 180px;
       height: 180px;
